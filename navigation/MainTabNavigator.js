@@ -4,8 +4,8 @@ import { createStackNavigator, createBottomTabNavigator } from 'react-navigation
 
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
-import SettingsScreen from '../screens/SettingsScreen';
+import CurrentScreen from '../screens/CurrentScreen';
+import DisabilityScreen from '../screens/DisabilityScreen';
 
 const config = Platform.select({
   web: { headerMode: 'screen' },
@@ -20,7 +20,7 @@ const HomeStack = createStackNavigator(
 );
 
 HomeStack.navigationOptions = {
-  tabBarLabel: 'Main',
+  tabBarLabel: 'Home',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -35,42 +35,42 @@ HomeStack.navigationOptions = {
 
 HomeStack.path = '';
 
-const LinksStack = createStackNavigator(
+const Current = createStackNavigator(
   {
-    Links: LinksScreen,
+    Current: CurrentScreen,
   },
   config
 );
 
-LinksStack.navigationOptions = {
+Current.navigationOptions = {
   tabBarLabel: 'Current',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-warning' : 'md-warning'} />
   ),
 };
 
-LinksStack.path = '';
+Current.path = '';
 
-const SettingsStack = createStackNavigator(
+const Disability = createStackNavigator(
   {
-    Settings: SettingsScreen,
+    Disability: DisabilityScreen,
   },
   config
 );
 
-SettingsStack.navigationOptions = {
+Disability.navigationOptions = {
   tabBarLabel: 'Disability',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-headset' : 'md-headset'} />
   ),
 };
 
-SettingsStack.path = '';
+Disability.path = '';
 
 const tabNavigator = createBottomTabNavigator({
   HomeStack,
-  LinksStack,
-  SettingsStack,
+  Current,
+  Disability,
 });
 
 tabNavigator.path = '';
