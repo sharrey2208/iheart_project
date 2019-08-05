@@ -6,6 +6,7 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import CurrentScreen from '../screens/CurrentScreen';
 import DisabilityScreen from '../screens/DisabilityScreen';
+import EducationScreen from '../screens/EducationScreen';
 
 const config = Platform.select({
   web: { headerMode: 'screen' },
@@ -67,12 +68,39 @@ Disability.navigationOptions = {
 
 Disability.path = '';
 
+
+
+
+
+const Education = createStackNavigator(
+  {
+    Education: EducationScreen,
+  },
+  config
+);
+
+Education.navigationOptions = {
+  tabBarLabel: 'Education',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={
+        Platform.OS === 'ios'
+          ? "ios-book"
+          : "md-book"
+      }
+    />
+  ),
+};
+
+HomeStack.path = '';
+
 const tabNavigator = createBottomTabNavigator({
   HomeStack,
   Current,
   Disability,
+  Education,
 });
-
 tabNavigator.path = '';
 
 export default tabNavigator;
