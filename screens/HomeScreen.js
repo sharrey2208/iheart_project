@@ -5,13 +5,13 @@ import {
   Platform,
   ScrollView,
   StyleSheet,
-  Text,
   TouchableOpacity,
   View,
   Dimensions
 } from "react-native";
 import Carousel from "react-native-snap-carousel";
 import { MonoText } from "../components/StyledText";
+import { Card, Text } from "react-native-elements";
 
 const entries = [
   { image: require("../assets/images/slide1.png") },
@@ -24,19 +24,34 @@ const fractionWidth = width * 0.85;
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      <Carousel
-        data={entries}
-        renderItem={renderItem}
-        sliderWidth={width}
-        itemWidth={fractionWidth}
-        inactiveSlideScale={0.95}
-        slideStyle={styles.slideStyle}
-        containerCustomStyle={styles.carousel}
-      />
+      <View style={{ height: 240 }}>
+        <Carousel
+          data={entries}
+          renderItem={renderItem}
+          sliderWidth={width}
+          itemWidth={fractionWidth}
+          inactiveSlideScale={0.95}
+          slideStyle={styles.slideStyle}
+          containerCustomStyle={styles.carousel}
+        />
+      </View>
+      <Card>
+        <Text style={{ fontWeight: "bold", fontSize: 25 }}>iHEARt Project</Text>
+        <Text style={{ fontSize: 18 }}>
+          An aim to educate and spread awareness to young and future parents on
+          the importance of early intervention for hearing impaired children,
+          such that any individual with hearing impairment can have a fair
+          chance to communicate and be given the right opportunity to strive to
+          their fullest potential!
+        </Text>
+      </Card>
     </View>
   );
 }
 
+HomeScreen.navigationOptions = {
+  title: "Home"
+};
 function renderItem({ item }) {
   return (
     <Image
@@ -93,10 +108,11 @@ const styles = StyleSheet.create({
   },
   slideStyle: {
     shadowRadius: 3,
-    shadowColor: "violet",
+    shadowColor: "indigo",
     shadowOpacity: 1
   },
   carousel: {
-    paddingTop: 25
+    paddingTop: 20,
+    backgroundColor: "lavender"
   }
 });
