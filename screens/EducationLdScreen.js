@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { View, StyleSheet, ScrollView } from "react-native";
 import { Card } from "react-native-elements";
 import { Segment, Button, Text, Content } from "native-base";
+import TabHA from "./TabHA";
+import TabCI from "./TabCI";
+
 export default function EducationLdScreen() {
   [selectedTab, setSelectedTab] = useState(1);
   return (
@@ -27,8 +30,8 @@ export default function EducationLdScreen() {
         </Button>
       </Segment>
       <Content padder>
-        {selectedTab == 1 && <Text>You selected one</Text>}
-        {selectedTab == 2 && <Text>You selected two</Text>}
+        {selectedTab == 1 && <TabHA />}
+        {selectedTab == 2 && <TabCI />}
       </Content>
     </ScrollView>
   );

@@ -1,10 +1,10 @@
 import React from "react";
 import { View, Text } from "react-native";
 
-export default function tabHA(props) {
+export default function TabHA(props) {
   return (
     <View>
-      <Text>First tab!</Text>
+      <Text>Second tab!</Text>
     </View>
   );
 }
