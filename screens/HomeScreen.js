@@ -11,7 +11,8 @@ import {
 } from "react-native";
 import Carousel from "react-native-snap-carousel";
 import { MonoText } from "../components/StyledText";
-import { Card, Text } from "react-native-elements";
+import { Card, Text, Button } from "react-native-elements";
+import { setRecoveryProps } from "expo/build/ErrorRecovery/ErrorRecovery";
 
 const entries = [
   { image: require("../assets/images/slide1.png") },
@@ -21,9 +22,9 @@ const entries = [
 
 var { height, width } = Dimensions.get("window");
 const fractionWidth = width * 0.85;
-export default function HomeScreen() {
+export default function HomeScreen(props) {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <View style={{ height: 240 }}>
         <Carousel
           data={entries}
@@ -45,13 +46,26 @@ export default function HomeScreen() {
           their fullest potential!
         </Text>
       </Card>
-    </View>
+      <View style={styles.contact}>
+        <Button
+          title="Contact Details >"
+          type="outline"
+          onPress={() => {
+            buttonPressed(props);
+          }}
+        />
+      </View>
+    </ScrollView>
   );
 }
 
 HomeScreen.navigationOptions = {
   title: "Home"
 };
+
+function buttonPressed(props) {
+  props.navigation.navigate("Contact");
+}
 function renderItem({ item }) {
   return (
     <Image
@@ -100,7 +114,7 @@ function handleHelpPress() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff"
+    backgroundColor: "lavender"
   },
   carouselImage: {
     height: 200,
@@ -114,5 +128,10 @@ const styles = StyleSheet.create({
   carousel: {
     paddingTop: 20,
     backgroundColor: "lavender"
+  },
+  contact: {
+    marginTop: 18,
+    marginLeft: 13,
+    marginRight: 13
   }
 });

@@ -1,106 +1,108 @@
-import React from 'react';
-import { Platform } from 'react-native';
-import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
+import React from "react";
+import { Platform } from "react-native";
+import {
+  createStackNavigator,
+  createBottomTabNavigator
+} from "react-navigation";
 
-import TabBarIcon from '../components/TabBarIcon';
-import HomeScreen from '../screens/HomeScreen';
-import CurrentScreen from '../screens/CurrentScreen';
-import DisabilityScreen from '../screens/DisabilityScreen';
-import EducationScreen from '../screens/EducationScreen';
+import TabBarIcon from "../components/TabBarIcon";
+import HomeScreen from "../screens/HomeScreen";
+import CurrentScreen from "../screens/CurrentScreen";
+import DisabilityScreen from "../screens/DisabilityScreen";
+import EducationScreen from "../screens/EducationScreen";
+import HomeContactScreen from "../screens/HomeContactScreen";
+import DisabilityMilestoneScreen from "../DisabilityMilestoneScreen";
 
 const config = Platform.select({
-  web: { headerMode: 'screen' },
-  default: {},
+  web: { headerMode: "screen" },
+  default: "Home"
 });
 
 const HomeStack = createStackNavigator(
   {
     Home: HomeScreen,
+    Contact: HomeContactScreen,
+    milestone: DisabilityMilestoneScreen
   },
+
   config
 );
 
 HomeStack.navigationOptions = {
-  tabBarLabel: 'Home',
+  tabBarLabel: "Home",
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? "ios-home"
-          : "md-home"
-      }
+      name={Platform.OS === "ios" ? "ios-home" : "md-home"}
     />
-  ),
+  )
 };
 
-HomeStack.path = '';
+HomeStack.path = "";
 
 const Current = createStackNavigator(
   {
-    Current: CurrentScreen,
+    Current: CurrentScreen
   },
   config
 );
 
 Current.navigationOptions = {
-  tabBarLabel: 'Current',
+  tabBarLabel: "Current",
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-warning' : 'md-warning'} />
-  ),
+    <TabBarIcon
+      focused={focused}
+      name={Platform.OS === "ios" ? "ios-warning" : "md-warning"}
+    />
+  )
 };
 
-Current.path = '';
+Current.path = "";
 
 const Disability = createStackNavigator(
   {
-    Disability: DisabilityScreen,
+    Disability: DisabilityScreen
   },
   config
 );
 
 Disability.navigationOptions = {
-  tabBarLabel: 'Disability',
+  tabBarLabel: "Disability",
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-headset' : 'md-headset'} />
-  ),
+    <TabBarIcon
+      focused={focused}
+      name={Platform.OS === "ios" ? "ios-headset" : "md-headset"}
+    />
+  )
 };
 
-Disability.path = '';
-
-
-
-
+Disability.path = "";
 
 const Education = createStackNavigator(
   {
-    Education: EducationScreen,
+    Education: EducationScreen
   },
   config
 );
 
 Education.navigationOptions = {
-  tabBarLabel: 'Education',
+  tabBarLabel: "Education",
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? "ios-book"
-          : "md-book"
-      }
+      name={Platform.OS === "ios" ? "ios-book" : "md-book"}
     />
-  ),
+  )
 };
 
-HomeStack.path = '';
+HomeStack.path = "";
 
 const tabNavigator = createBottomTabNavigator({
   HomeStack,
   Current,
   Disability,
-  Education,
+  Education
 });
-tabNavigator.path = '';
+tabNavigator.path = "";
 
 export default tabNavigator;

@@ -1,27 +1,18 @@
-import React from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
-import { ExpoLinksView } from '@expo/samples';
+import React from "react";
+import { View, Text, StyleSheet, ScrollView } from "react-native";
+import { Card } from "react-native-elements";
 
 export default function CurrentScreen() {
-  return (
-    <ScrollView style={styles.container}>
-      {/**
-       * Go ahead and delete ExpoLinksView and replace it with your content;
-       * we just wanted to provide you with some helpful links.
-       */}
-      <ExpoLinksView />
-    </ScrollView>
-  );
+  return <ScrollView style={styles.container} />;
 }
 
 CurrentScreen.navigationOptions = {
-  title: 'Current',
+  title: "Current"
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     paddingTop: 15,
-    backgroundColor: '#fff',
-  },
+    backgroundColor: "lavender"
+  }
 });
