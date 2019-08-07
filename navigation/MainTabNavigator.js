@@ -16,6 +16,7 @@ import DisabilityInterventionsScreen from "../screens/DisabilityInterventionsScr
 import EducationLdScreen from "../screens/EducationLdScreen";
 import EducationTherapiesScreen from "../screens/EducationTherapiesScreen";
 import EducationPlScreen from "../screens/EducationPlScreen";
+import PregDetailScreen from "../screens/PregDetailScreen";
 
 const config = Platform.select({
   web: { headerMode: "screen" },
@@ -88,7 +89,8 @@ const Education = createStackNavigator(
     Education: EducationScreen,
     ld: EducationLdScreen,
     therapy: EducationTherapiesScreen,
-    journey: EducationPlScreen
+    journey: EducationPlScreen,
+    PregDetail: PregDetailScreen
   },
   config
 );

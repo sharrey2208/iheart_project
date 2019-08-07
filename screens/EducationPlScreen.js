@@ -2,21 +2,36 @@ import React from "react";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
 import { Card } from "react-native-elements";
 import { List, ListItem } from "native-base";
+import PregDetailScreen from "./PregDetailScreen";
+import { setRecoveryProps } from "expo/build/ErrorRecovery/ErrorRecovery";
 
-export default function EducationPlScreen() {
+const journey = [
+  { title: "Before Pregnancy", age: "12" },
+  { title: "During Pregnancy", age: "15" },
+  { title: "After Pregnancy", age: "30" },
+  { title: "Premature Birth", age: "12" }
+];
+
+function showjourney(props, journey) {
+  props.navigation.push("PregDetail", { journey: journey });
+}
+export default function EducationPlScreen(props) {
   return (
     <ScrollView style={styles.container}>
       <View>
         <List>
-          <ListItem>
-            <Text>Simon Mignolet</Text>
-          </ListItem>
-          <ListItem>
-            <Text>Nathaniel Clyne</Text>
-          </ListItem>
-          <ListItem>
-            <Text>Dejan Lovren</Text>
-          </ListItem>
+          {journey.map(journey => {
+            return (
+              <ListItem
+                key={journey.title}
+                onPress={() => {
+                  showjourney(props, journey);
+                }}
+              >
+                <Text>{journey.title}</Text>
+              </ListItem>
+            );
+          })}
         </List>
       </View>
     </ScrollView>
