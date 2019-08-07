@@ -68,7 +68,7 @@ function buttonPressed(props) {
 }
 
 function buttonP(props) {
-  props.navigation.navigate("lifestyle");
+  props.navigation.navigate("journey");
 }
 
 EducationScreen.navigationOptions = {
