@@ -66,6 +66,7 @@ DisabilityScreen.navigationOptions = {
 
 function buttonPressed(props) {
   props.navigation.navigate("milestone");
+  props.navigation.goBack("disability");
 }
 
 function buttonClicked(props) {
