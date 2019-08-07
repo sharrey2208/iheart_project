@@ -68,7 +68,7 @@ function buttonPressed(props) {
 }
 
 function buttonP(props) {
-  props.navigation.navigate("pregnancy");
+  props.navigation.navigate("pr");
 }
 
 EducationScreen.navigationOptions = {
