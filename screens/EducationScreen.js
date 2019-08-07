@@ -18,12 +18,35 @@ export default function EducationScreen(props) {
           }}
         />
       </View>
+      <View>
+        <Text style={styles.hd}>Therapies</Text>
+        <Text style={styles.listeningd}>
+          Therapies are important for your child to get comfortable and make use
+          of their listening devices effectively. The two common therapies in
+          Indonesia is the Speech therapy, and auditory verbal rehabilitation.
+          It is necessary to be aware of the differences of each therapy in
+          order to make the right decision.
+        </Text>
+      </View>
+      <View style={styles.ld}>
+        <Button
+          title="Learn the difference here >"
+          type="outline"
+          onPress={() => {
+            buttonPressed(props);
+          }}
+        />
+      </View>
     </ScrollView>
   );
 }
 
 function buttonClicked(props) {
   props.navigation.navigate("ld");
+}
+
+function buttonPressed(props) {
+  props.navigation.navigate("therapies");
 }
 
 EducationScreen.navigationOptions = {
