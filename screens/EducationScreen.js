@@ -23,7 +23,7 @@ export default function EducationScreen(props) {
 }
 
 function buttonClicked(props) {
-  props.navigation.navigate("listeningdevices");
+  props.navigation.navigate("ld");
 }
 
 EducationScreen.navigationOptions = {

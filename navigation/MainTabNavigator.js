@@ -26,7 +26,7 @@ const HomeStack = createStackNavigator(
     Contact: HomeContactScreen,
     milestone: DisabilityMilestoneScreen,
     interventions: DisabilityInterventionsScreen,
-    listeningdevices: EducationLdScreen
+    ld: EducationLdScreen
   },
 
   config
