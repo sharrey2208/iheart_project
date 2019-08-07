@@ -31,6 +31,30 @@ export default function DisabilityScreen(props) {
             }}
           />
         </View>
+        <Text style={styles.hd}>Interventions</Text>
+        <Text style={styles.hiddend}>
+          When not detected or intervened early enough, further problems will
+          arise. Having a hearing disability means that your child will be more
+          prone to struggle in comprehending language and speech, resulting in
+          behavioral problems where your child will feel frustrated, isolated
+          and not understood by others. In some cases, your child may start
+          having psychological problems.
+        </Text>
+        <Text style={styles.hiddend}>
+          It is important to intervene during the Golden Age, from 0 to 3 years
+          old. This is because the brain is much more flexible during the
+          younger years, making it much easier for children to start learning
+          and comprehending words with their hearing aids or cochlear implants
+        </Text>
+        <View style={styles.interventions}>
+          <Button
+            title="Interventions >"
+            type="outline"
+            onPress={() => {
+              buttonClicked(props);
+            }}
+          />
+        </View>
       </View>
     </ScrollView>
   );
@@ -42,6 +66,10 @@ DisabilityScreen.navigationOptions = {
 
 function buttonPressed(props) {
   props.navigation.navigate("milestone");
+}
+
+function buttonClicked(props) {
+  props.navigation.navigate("interventions");
 }
 
 const styles = StyleSheet.create({
@@ -60,5 +88,15 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     fontWeight: "bold",
     marginTop: 10
+  },
+  milestone: {
+    marginLeft: 10,
+    marginRight: 10,
+    marginTop: 7
+  },
+  interventions: {
+    marginLeft: 10,
+    marginRight: 10,
+    marginTop: 7
   }
 });

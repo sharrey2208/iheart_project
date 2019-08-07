@@ -11,7 +11,7 @@ import CurrentScreen from "../screens/CurrentScreen";
 import DisabilityScreen from "../screens/DisabilityScreen";
 import EducationScreen from "../screens/EducationScreen";
 import HomeContactScreen from "../screens/HomeContactScreen";
-import DisabilityMilestoneScreen from "../DisabilityMilestoneScreen";
+import DisabilityMilestoneScreen from "../screens/DisabilityMilestoneScreen";
 
 const config = Platform.select({
   web: { headerMode: "screen" },
