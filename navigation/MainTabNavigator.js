@@ -13,7 +13,7 @@ import EducationScreen from "../screens/EducationScreen";
 import HomeContactScreen from "../screens/HomeContactScreen";
 import DisabilityMilestoneScreen from "../screens/DisabilityMilestoneScreen";
 import DisabilityInterventionsScreen from "../screens/DisabilityInterventionsScreen";
-import EducationLdScreen from "../screens/EducationLdScreen";
+import DisabilityLdScreen from "../screens/EducationLdScreen";
 
 const config = Platform.select({
   web: { headerMode: "screen" },
