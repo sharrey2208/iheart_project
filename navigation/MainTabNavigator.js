@@ -15,6 +15,7 @@ import DisabilityMilestoneScreen from "../screens/DisabilityMilestoneScreen";
 import DisabilityInterventionsScreen from "../screens/DisabilityInterventionsScreen";
 import EducationLdScreen from "../screens/EducationLdScreen";
 import EducationTherapiesScreen from "../screens/EducationTherapiesScreen";
+import EducationPlScreen from "../screens/EducationPlScreen";
 
 const config = Platform.select({
   web: { headerMode: "screen" },
@@ -24,11 +25,7 @@ const config = Platform.select({
 const HomeStack = createStackNavigator(
   {
     Home: HomeScreen,
-    Contact: HomeContactScreen,
-    milestone: DisabilityMilestoneScreen,
-    interventions: DisabilityInterventionsScreen,
-    ld: EducationLdScreen,
-    therapy: EducationTherapiesScreen
+    Contact: HomeContactScreen
   },
 
   config
@@ -67,7 +64,9 @@ Current.path = "";
 
 const Disability = createStackNavigator(
   {
-    Disability: DisabilityScreen
+    Disability: DisabilityScreen,
+    milestone: DisabilityMilestoneScreen,
+    interventions: DisabilityInterventionsScreen
   },
   config
 );
@@ -86,7 +85,10 @@ Disability.path = "";
 
 const Education = createStackNavigator(
   {
-    Education: EducationScreen
+    Education: EducationScreen,
+    ld: EducationLdScreen,
+    therapy: EducationTherapiesScreen,
+    journey: EducationPlScreen
   },
   config
 );

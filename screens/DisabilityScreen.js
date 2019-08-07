@@ -66,7 +66,6 @@ DisabilityScreen.navigationOptions = {
 
 function buttonPressed(props) {
   props.navigation.navigate("milestone");
-  props.navigation.goBack("disability");
 }
 
 function buttonClicked(props) {
@@ -93,11 +92,11 @@ const styles = StyleSheet.create({
   milestone: {
     marginLeft: 10,
     marginRight: 10,
-    marginTop: 7
+    marginTop: 10
   },
   interventions: {
     marginLeft: 10,
     marginRight: 10,
-    marginTop: 7
+    marginTop: 10
   }
 });

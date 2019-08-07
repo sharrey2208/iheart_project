@@ -50,6 +50,7 @@ export default function HomeScreen(props) {
         <Button
           title="Contact Details >"
           type="outline"
+          color="white"
           onPress={() => {
             buttonPressed(props);
           }}
@@ -132,6 +133,7 @@ const styles = StyleSheet.create({
   contact: {
     marginTop: 18,
     marginLeft: 13,
-    marginRight: 13
+    marginRight: 13,
+    backgroundColor: "#b5adf7"
   }
 });
