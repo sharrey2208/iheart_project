@@ -30,7 +30,7 @@ const HomeStack = createStackNavigator(
     interventions: DisabilityInterventionsScreen,
     ld: EducationLdScreen,
     therapy: EducationTherapiesScreen,
-    preg: EducationPlScreen
+    pregnancy: EducationPlScreen
   },
 
   config
