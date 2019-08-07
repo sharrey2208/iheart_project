@@ -39,7 +39,7 @@ export default function EducationScreen(props) {
       </View>
       <View>
         <Text style={styles.hd}>Pregnancy Journey</Text>
-        <Text style={styles.preg}>
+        <Text style={styles.listeningd}>
           having a healthy pregnancy journey is important to reduce the risk of
           your child obtaining problems with his/her hearing. There are
           different precautions you need to take throughout your pregnancy
