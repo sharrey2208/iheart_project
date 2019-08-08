@@ -32,7 +32,7 @@ const dataArray = [
 ];
 
 const entries = [
-  { image: require("../assets/images/babyCI.jpeg") },
+  { image: require("../assets/images/babyCI.png") },
   { image: require("../assets/images/ci.png") }
 ];
 
