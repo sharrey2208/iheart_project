@@ -32,7 +32,8 @@ const dataArray = [
 
 const entries = [
   { image: require("../assets/images/babyHA.png") },
-  { image: require("../assets/images/bte.png") }
+  { image: require("../assets/images/behind.png") },
+  { image: require("../assets/images/ite.png") }
 ];
 
 var { height, width } = Dimensions.get("window");
@@ -86,7 +87,7 @@ export default function TabHA(props) {
             expandedIcon="remove"
             iconStyle={{ color: "green" }}
             expandedIconStyle={{ color: "red" }}
-            headerStyle={{ backgroundColor: "#ededed" }}
+            headerStyle={{ backgroundColor: "#ededed", fontSize: 17 }}
             contentStyle={{ backgroundColor: "white" }}
           />
         </ScrollView>
