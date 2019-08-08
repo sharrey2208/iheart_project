@@ -32,9 +32,8 @@ const dataArray = [
 ];
 
 const entries = [
-  { image: require("../assets/images/babyHA.png") },
-  { image: require("../assets/images/BTE.png") },
-  { image: require("../assets/images/ITE.jpg") }
+  { image: require("../assets/images/babyCI.jpeg") },
+  { image: require("../assets/images/ci.png") }
 ];
 
 var { height, width } = Dimensions.get("window");
