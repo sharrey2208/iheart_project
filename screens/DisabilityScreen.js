@@ -61,7 +61,15 @@ export default function DisabilityScreen(props) {
 }
 
 DisabilityScreen.navigationOptions = {
-  title: "Disability"
+  title: "Disability",
+  headerStyle: {
+    backgroundColor: "#a794ff"
+  },
+  headerTintColor: "white",
+  headerTitleStyle: {
+    fontWeight: "bold",
+    fontSize: 18
+  }
 };
 
 function buttonPressed(props) {

@@ -9,32 +9,35 @@ const journey = [
   {
     title: "Before Pregnancy",
     list1:
-      "> Preconception checkup: make sure you are in good health when pregnant",
-    list2: "> Check for infections: testing and treatment highly advised",
+      "Preconception checkup: Make sure you are in good health when pregnant",
+    list2: "Check for infections: Testing and treatment highly advised",
     list3:
-      "> Vaccination: make sure you are up to date with all your vaccinations"
+      "Vaccination: Make sure you are up to date with all your vaccinations"
   },
   {
     title: "During Pregnancy",
-    list1: "> Prenatal care checkups: make sure to go for regular checkups",
+    list1: "Prenatal care checkups: Make sure to go for regular checkups",
     list2:
-      "> Possible infections/virus during pregnancy: Toxoplasma, rubella, measles, syphilis, cytomegalovirus, herpes 1 and herpes 2",
+      "Possible infections/virus during pregnancy: Toxoplasma, rubella, measles, syphilis, cytomegalovirus, herpes 1 and herpes 2",
     list3:
-      "> Harmful drugs to be avoided: Streptomycin, tobramycin, quinine/chloroquine, thalidomide, and gentamicin",
-    list4:
-      "> Simple precautions: keep hands clean at all times, avoid undercooked meat, avoid smoking and drinking, have safe sex"
+      "Harmful drugs to be avoided: Streptomycin, tobramycin, quinine/chloroquine, thalidomide, and gentamicin"
   },
   {
     title: "After Pregnancy",
-    list1: "> Keep baby away from loud sounds",
-    list2: "> Make sure to bring your child for regular checkups",
-    list3:
-      "> If your child has an ear infection, go for a treatment immediately"
+    list1: "Keep baby away from loud sounds",
+    list2: "Make sure to bring your child for regular checkups",
+    list3: "If your child has an ear infection, go for a treatment immediately"
   },
   {
     title: "Premature Birth",
     list1:
-      "> Low birthweight/premature birth may cause health problems such as hearing loss. Learn more about the precautions needed to avoid risks of premature birth below."
+      "Low birthweight/premature birth may cause health problems such as hearing loss. Learn more about the precautions needed to avoid risks of premature birth below."
+  },
+  {
+    title: "Basic Precautions",
+    list1: "Keep hands clean at all times",
+    list2: "Avoid undercooked meat, smoking, and drinking",
+    list3: "Have safe sex"
   }
 ];
 
@@ -70,7 +73,15 @@ export default function EducationPlScreen(props) {
 }
 
 EducationPlScreen.navigationOptions = {
-  title: "Pregnancy Journey"
+  title: "Pregnancy Journey",
+  headerStyle: {
+    backgroundColor: "#a794ff"
+  },
+  headerTintColor: "white",
+  headerTitleStyle: {
+    fontWeight: "bold",
+    fontSize: 18
+  }
 };
 
 const styles = StyleSheet.create({

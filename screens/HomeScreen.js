@@ -5,23 +5,22 @@ import {
   Platform,
   ScrollView,
   StyleSheet,
-  TouchableOpacity,
   View,
   Dimensions
 } from "react-native";
 import Carousel from "react-native-snap-carousel";
-import { MonoText } from "../components/StyledText";
 import { Card, Text, Button } from "react-native-elements";
+import { CardItem } from "native-base";
 import { setRecoveryProps } from "expo/build/ErrorRecovery/ErrorRecovery";
 
 const entries = [
   { image: require("../assets/images/slide1.png") },
   { image: require("../assets/images/slide2.png") },
-  { image: require("../assets/images/slide4.png") }
+  { image: require("../assets/images/slide3.png") }
 ];
 
 var { height, width } = Dimensions.get("window");
-const fractionWidth = width * 0.85;
+const fractionWidth = width * 0.9;
 export default function HomeScreen(props) {
   return (
     <ScrollView style={styles.container}>
@@ -37,13 +36,19 @@ export default function HomeScreen(props) {
         />
       </View>
       <Card>
-        <Text style={{ fontWeight: "bold", fontSize: 25 }}>iHEARt Project</Text>
-        <Text style={{ fontSize: 18 }}>
+        <CardItem bordered>
+          <Text style={styles.title}>iHEARt Project</Text>
+        </CardItem>
+        <Text style={styles.content}>
           An aim to educate and spread awareness to young and future parents on
           the importance of early intervention for hearing impaired children,
           such that any individual with hearing impairment can have a fair
           chance to communicate and be given the right opportunity to strive to
           their fullest potential!
+        </Text>
+        <Text style={styles.content}>
+          A small community within a large population, it is necessary to
+          educate on an issue that may not be well known to the general public
         </Text>
       </Card>
       <View style={styles.contact}>
@@ -61,7 +66,16 @@ export default function HomeScreen(props) {
 }
 
 HomeScreen.navigationOptions = {
-  title: "Home"
+  title: "iHEARt",
+  headerStyle: {
+    backgroundColor: "#a794ff"
+  },
+  headerTintColor: "white",
+  headerTitleStyle: {
+    fontWeight: "bold",
+    fontFamily: "Courier New",
+    fontSize: 24
+  }
 };
 
 function buttonPressed(props) {
@@ -122,7 +136,7 @@ const styles = StyleSheet.create({
     width: "100%"
   },
   slideStyle: {
-    shadowRadius: 3,
+    shadowRadius: 1,
     shadowColor: "indigo",
     shadowOpacity: 1
   },
@@ -134,5 +148,13 @@ const styles = StyleSheet.create({
     marginTop: 18,
     marginLeft: 13,
     marginRight: 13
+  },
+  content: {
+    fontSize: 18,
+    marginTop: 10
+  },
+  title: {
+    fontSize: 25,
+    fontWeight: "bold"
   }
 });

@@ -31,7 +31,7 @@ export default function TabAVT(props) {
           </CardItem>
           <CardItem bordered>
             <Text>
-              more likely to develop social and critical skills, and go to a
+              More likely to develop social and critical skills, and go to a
               normal school
             </Text>
           </CardItem>

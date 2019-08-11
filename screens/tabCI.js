@@ -1,6 +1,5 @@
 import React from "react";
-import { View, StyleSheet, ScrollView, Dimensions } from "react-native";
-import { Image } from "react-native-elements";
+import { View, StyleSheet, ScrollView, Dimensions, Image } from "react-native";
 import Carousel from "react-native-snap-carousel";
 import {
   Container,
@@ -37,12 +36,12 @@ const entries = [
 ];
 
 var { height, width } = Dimensions.get("window");
-const fractionWidth = width * 0.95;
+const fractionWidth = width * 0.9;
 export default function TabHA(props) {
   return (
     <View>
       <ScrollView>
-        <View style={{ height: 230 }}>
+        <View style={{ height: 240 }}>
           <Carousel
             data={entries}
             renderItem={renderItem}
@@ -77,8 +76,8 @@ export default function TabHA(props) {
             style={styles.accord}
             dataArray={dataArray}
             expanded={0}
-            icon="add"
-            expandedIcon="remove"
+            icon="arrow-down"
+            expandedIcon="arrow-up"
             iconStyle={{ color: "green" }}
             expandedIconStyle={{ color: "red" }}
             headerStyle={{ backgroundColor: "#ededed" }}
@@ -110,12 +109,12 @@ const styles = StyleSheet.create({
     width: "100%"
   },
   slideStyle: {
-    shadowRadius: 3,
+    shadowRadius: 1,
     shadowColor: "indigo",
     shadowOpacity: 1
   },
   carousel: {
-    paddingTop: 10,
+    paddingTop: 20,
     backgroundColor: "lavender"
   },
   accord: {

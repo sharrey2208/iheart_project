@@ -38,7 +38,15 @@ export default function EducationLdScreen() {
 }
 
 EducationLdScreen.navigationOptions = {
-  title: "Listening Devices"
+  title: "Listening Devices",
+  headerStyle: {
+    backgroundColor: "#a794ff"
+  },
+  headerTintColor: "white",
+  headerTitleStyle: {
+    fontWeight: "bold",
+    fontSize: 18
+  }
 };
 
 const styles = StyleSheet.create({

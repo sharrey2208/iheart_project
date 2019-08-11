@@ -1,19 +1,8 @@
 import React from "react";
-import { View, StyleSheet, ScrollView, Dimensions } from "react-native";
-import { Image } from "react-native-elements";
-import Carousel from "react-native-snap-carousel";
-import {
-  Container,
-  Header,
-  Content,
-  Card,
-  CardItem,
-  Accordion,
-  Text,
-  Body
-} from "native-base";
+import { View, StyleSheet, ScrollView } from "react-native";
+import { Card, CardItem, Text, Body } from "native-base";
 
-export default function TabHA(props) {
+export default function TabHA() {
   return (
     <View>
       <ScrollView>
@@ -43,10 +32,3 @@ export default function TabHA(props) {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "lavender"
-  }
-});

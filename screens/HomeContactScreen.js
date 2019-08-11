@@ -1,6 +1,7 @@
 import React from "react";
-import { View, Text, StyleSheet, ScrollView } from "react-native";
-import { Card } from "react-native-elements";
+import { View, StyleSheet, ScrollView } from "react-native";
+import {} from "react-native-elements";
+import { Text, Card, CardItem, Icon } from "native-base";
 
 export default function HomeContactScreen() {
   return (
@@ -10,17 +11,40 @@ export default function HomeContactScreen() {
           Feel free to contact/email any comments, opinions, or questions
           regarding this issue!{" "}
         </Text>
-        <Card>
-          <Text style={styles.number}>Contact at:</Text>
-          <Text style={styles.number}>0822-61063948</Text>
-          <Text style={styles.number}>iheartproject22@gmail.com</Text>
+        <Card style={styles.card}>
+          <Text style={styles.title}>Contact at:</Text>
+
+          <View style={styles.row}>
+            <Icon
+              ios="ios-call"
+              android="md-call"
+              style={{ fontSize: 24, color: "#3474e3" }}
+            />
+            <Text style={styles.list}>0822-61063948</Text>
+          </View>
+          <View style={styles.row1}>
+            <Icon
+              ios="ios-mail"
+              android="md-mail"
+              style={{ fontSize: 24, color: "#3474e3" }}
+            />
+            <Text style={styles.list}>iheartproject22@gmail.com</Text>
+          </View>
         </Card>
-        <Text style={styles.instagram}>
+        <Text style={styles.insta}>
           Follow the iHEARt Instagram page to learn more about this issue and be
           updated with different kinds of talks and news!
         </Text>
-        <Card>
-          <Text style={styles.insta}>Instagram: iheartproject_jkt</Text>
+        <Card style={styles.card}>
+          <Text style={styles.title}>Instagram: </Text>
+          <View style={styles.row1}>
+            <Icon
+              ios="logo-instagram"
+              android="logi-instagram"
+              style={{ fontSize: 24, color: "#3474e3" }}
+            />
+            <Text style={styles.list}>iheartproject_jkt</Text>
+          </View>
         </Card>
       </View>
     </ScrollView>
@@ -28,7 +52,15 @@ export default function HomeContactScreen() {
 }
 
 HomeContactScreen.navigationOptions = {
-  title: "Contact Details"
+  title: "Contact Details",
+  headerStyle: {
+    backgroundColor: "#a794ff"
+  },
+  headerTintColor: "white",
+  headerTitleStyle: {
+    fontWeight: "bold",
+    fontSize: 18
+  }
 };
 
 const styles = StyleSheet.create({
@@ -41,19 +73,36 @@ const styles = StyleSheet.create({
     marginLeft: 12,
     marginRight: 5
   },
-  number: {
+  insta: {
     fontSize: 20,
+    marginLeft: 12,
+    marginTop: 15,
+    marginRight: 5
+  },
+  title: {
+    fontSize: 20,
+    marginLeft: 12,
+    marginTop: 10,
+    fontWeight: "bold"
+  },
+  row: {
+    flexDirection: "row",
     marginLeft: 10,
     marginTop: 5
   },
-  instagram: {
-    marginTop: 15,
-    fontSize: 20,
-    marginLeft: 12,
-    marginRight: 5
+  row1: {
+    flexDirection: "row",
+    marginLeft: 10,
+    marginTop: 5,
+    marginBottom: 10
   },
-  insta: {
-    fontSize: 20,
-    marginLeft: 10
+  card: {
+    marginLeft: 12,
+    marginRight: 12,
+    marginTop: 10
+  },
+  list: {
+    fontSize: 18,
+    marginLeft: 12
   }
 });

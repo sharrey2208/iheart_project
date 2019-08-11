@@ -17,7 +17,15 @@ export default function CurrentScreen() {
 }
 
 CurrentScreen.navigationOptions = {
-  title: "Current"
+  title: "Current",
+  headerStyle: {
+    backgroundColor: "#a794ff"
+  },
+  headerTintColor: "white",
+  headerTitleStyle: {
+    fontWeight: "bold",
+    fontSize: 18
+  }
 };
 
 const styles = StyleSheet.create({

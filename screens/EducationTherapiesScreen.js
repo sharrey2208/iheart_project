@@ -38,7 +38,15 @@ export default function EducationTherapiesScreen() {
 }
 
 EducationTherapiesScreen.navigationOptions = {
-  title: "Therapies"
+  title: "Therapies",
+  headerStyle: {
+    backgroundColor: "#a794ff"
+  },
+  headerTintColor: "white",
+  headerTitleStyle: {
+    fontWeight: "bold",
+    fontSize: 18
+  }
 };
 
 const styles = StyleSheet.create({
