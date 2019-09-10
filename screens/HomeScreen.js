@@ -1,13 +1,6 @@
 import * as WebBrowser from "expo-web-browser";
 import React from "react";
-import {
-  Image,
-  Platform,
-  ScrollView,
-  StyleSheet,
-  View,
-  Dimensions
-} from "react-native";
+import { Image, ScrollView, StyleSheet, View, Dimensions } from "react-native";
 import Carousel from "react-native-snap-carousel";
 import { Card, Text, Button } from "react-native-elements";
 import { CardItem } from "native-base";

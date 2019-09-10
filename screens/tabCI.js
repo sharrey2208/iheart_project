@@ -1,16 +1,7 @@
 import React from "react";
 import { View, StyleSheet, ScrollView, Dimensions, Image } from "react-native";
 import Carousel from "react-native-snap-carousel";
-import {
-  Container,
-  Header,
-  Content,
-  Card,
-  CardItem,
-  Accordion,
-  Text,
-  Body
-} from "native-base";
+import { Card, CardItem, Accordion, Text, Body } from "native-base";
 
 const dataArray = [
   {
