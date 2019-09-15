@@ -16,6 +16,9 @@ export default function PregDetailScreen(props) {
             <Text style={styles.listone}>
               {props.navigation.getParam("journey").list1}
             </Text>
+            <Text style={styles.listtwo}>
+              {props.navigation.getParam("journey").list11}
+            </Text>
           </Body>
         </CardItem>
         <CardItem bordered>
@@ -23,12 +26,18 @@ export default function PregDetailScreen(props) {
             <Text style={styles.listone}>
               {props.navigation.getParam("journey").list2}
             </Text>
+            <Text style={styles.listtwo}>
+              {props.navigation.getParam("journey").list22}
+            </Text>
           </Body>
         </CardItem>
         <CardItem bordered>
           <Body>
             <Text style={styles.listone}>
               {props.navigation.getParam("journey").list3}
+            </Text>
+            <Text style={styles.listtwo}>
+              {props.navigation.getParam("journey").list33}
             </Text>
           </Body>
         </CardItem>
@@ -67,9 +76,14 @@ const styles = StyleSheet.create({
   card: {
     marginLeft: 12,
     marginRight: 12,
-    marginTop: 15
+    marginTop: 15,
+    fontSize: 21
   },
   listone: {
-    fontSize: 17
+    fontSize: 18,
+    marginBottom: 10
+  },
+  listtwo: {
+    fontSize: 18
   }
 });

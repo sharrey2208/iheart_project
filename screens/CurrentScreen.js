@@ -1,17 +1,38 @@
-import React from "react";
-import { View, Text, StyleSheet, ScrollView } from "react-native";
+import React, { useState } from "react";
+import { View, StyleSheet, ScrollView } from "react-native";
 import { Card } from "react-native-elements";
-import { Accordion } from "native-base";
-
-const dataArray = [
-  { title: "Community Belief", content: "Lorem ipsum dolor sit amet" },
-  { title: "ENT Belief", content: "Lorem ipsum dolor sit amet" }
-];
+import { Segment, Button, Text, Content } from "native-base";
+import TabWorld from "./TabWorld";
+import TabIndo from "./TabIndo";
 
 export default function CurrentScreen() {
+  [selectedTab, setSelectedTab] = useState(1);
   return (
     <ScrollView style={styles.container}>
-      <Accordion dataArray={dataArray} expanded={0} />
+      <Segment>
+        <Button
+          first
+          active={selectedTab === 1}
+          onPress={() => {
+            setSelectedTab(1);
+          }}
+        >
+          <Text>World</Text>
+        </Button>
+        <Button
+          last
+          active={selectedTab === 2}
+          onPress={() => {
+            setSelectedTab(2);
+          }}
+        >
+          <Text>Indonesia</Text>
+        </Button>
+      </Segment>
+      <Content padder>
+        {selectedTab == 1 && <TabWorld />}
+        {selectedTab == 2 && <TabIndo />}
+      </Content>
     </ScrollView>
   );
 }
@@ -30,7 +51,6 @@ CurrentScreen.navigationOptions = {
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 15,
     backgroundColor: "lavender"
   }
 });

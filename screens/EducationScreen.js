@@ -1,13 +1,29 @@
 import React from "react";
 import { View, StyleSheet, ScrollView } from "react-native";
-import { Card, Text, Button } from "react-native-elements";
+import { Button } from "react-native-elements";
+import { Card, CardItem, Text, Body } from "native-base";
 
 export default function EducationScreen(props) {
   return (
     <ScrollView style={styles.container}>
       <View>
-        <Text style={styles.hd}>Listening Device</Text>
-        <Text style={styles.listeningd}>hello</Text>
+        <Card style={styles.card}>
+          <CardItem header bordered>
+            <Text style={{ fontSize: 20 }}>Listening Device</Text>
+          </CardItem>
+          <CardItem bordered>
+            <Body>
+              <Text style={styles.content}>
+                The beginning of your child’s journey starts with the
+                technological intervention, an important tool to stay connected
+                to the surroundings and amplify speech sounds from background
+                noises. {"\n"}
+                {"\n"}
+                The two main listening devices are:
+              </Text>
+            </Body>
+          </CardItem>
+        </Card>
         <View style={styles.ld}>
           <Button
             title="Listening Devices >"
@@ -17,14 +33,22 @@ export default function EducationScreen(props) {
             }}
           />
         </View>
-        <Text style={styles.hd}>Therapies</Text>
-        <Text style={styles.listeningd}>
-          Therapies are important for your child to get comfortable and make use
-          of their listening devices effectively. The two common therapies in
-          Indonesia is the Speech therapy, and auditory verbal rehabilitation.
-          It is necessary to be aware of the differences of each therapy in
-          order to make the right decision.
-        </Text>
+        <Card style={styles.card}>
+          <CardItem header bordered>
+            <Text style={{ fontSize: 20 }}>Therapies</Text>
+          </CardItem>
+          <CardItem bordered>
+            <Body>
+              <Text style={styles.content}>
+                Therapies are important for your child to get comfortable and
+                make use of their listening devices effectively. The two common
+                therapies in Indonesia is the Speech therapy, and auditory
+                verbal rehabilitation. It is necessary to be aware of the
+                differences of each therapy in order to make the right decision.
+              </Text>
+            </Body>
+          </CardItem>
+        </Card>
         <View style={styles.ld}>
           <Button
             title="Learn the differences here >"
@@ -34,13 +58,21 @@ export default function EducationScreen(props) {
             }}
           />
         </View>
-        <Text style={styles.hd}>Pregnancy Journey</Text>
-        <Text style={styles.listeningd}>
-          Having a healthy pregnancy journey is important to reduce the risk of
-          your child obtaining problems with his/her hearing. There are
-          different precautions you need to take throughout your pregnancy
-          journey.
-        </Text>
+        <Card style={styles.card}>
+          <CardItem header bordered>
+            <Text style={{ fontSize: 20 }}>Pregnancy Journey</Text>
+          </CardItem>
+          <CardItem bordered>
+            <Body>
+              <Text style={styles.content}>
+                Having a healthy pregnancy journey is important to reduce the
+                risk of your child obtaining problems with his/her hearing.
+                There are different precautions you need to take throughout your
+                pregnancy journey.
+              </Text>
+            </Body>
+          </CardItem>
+        </Card>
         <View style={styles.ld}>
           <Button
             title="Learn more >"
@@ -100,5 +132,13 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     marginRight: 10,
     marginTop: 10
+  },
+  content: {
+    fontSize: 18
+  },
+  card: {
+    marginLeft: 10,
+    marginRight: 10,
+    marginTop: 8
   }
 });
